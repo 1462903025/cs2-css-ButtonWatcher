@@ -48,8 +48,8 @@ public class ButtonWatcherPlugin : BasePlugin
         int iTime = gameRules.RoundTime - (int)(gameRules.LastThinkTime-gameRules.RoundStartTime);
         int iMin = iTime/60;
         int iSec = iTime%60;
-        Server.PrintToChatAll($"[BW] {ChatColors.White}[{ChatColors.LightRed}{iMin}:{iSec}{ChatColors.White}]{ChatColors.Lime}{sPlayerName}{ChatColors.White}[{ChatColors.Orange}{sSteamID}{ChatColors.White}][{ChatColors.Lime}#{sUserID}{ChatColors.White}] 이 {ChatColors.LightRed}{sButtonEntityName}[#{iButtonEntityIndex}] {ChatColors.White}를 눌렀습니다!");
-        Logger.LogInformation($"[BW] [{iMin}:{iSec}]{sPlayerName}[{sSteamID}][#{sUserID}] 이 {sButtonEntityName}[#{iButtonEntityIndex}] 를 눌렀습니다!");
+        Server.PrintToChatAll($"[BW] {ChatColors.White}[{ChatColors.LightRed}{iMin}:{iSec}{ChatColors.White}]{ChatColors.Lime}{sPlayerName}{ChatColors.White}[{ChatColors.Orange}{sSteamID}{ChatColors.White}][{ChatColors.Lime}#{sUserID}{ChatColors.White}] 按下了 {ChatColors.LightRed}{sButtonEntityName}[#{iButtonEntityIndex}] {ChatColors.White} 按钮!");
+        Logger.LogInformation($"[BW] [{iMin}:{iSec}]{sPlayerName}[{sSteamID}][#{sUserID}] 按下了 {sButtonEntityName}[#{iButtonEntityIndex}] !");
 
         return HookResult.Continue;
     }
